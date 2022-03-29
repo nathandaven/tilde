@@ -824,7 +824,7 @@
           second: this._showSeconds ? 'numeric' : undefined,
           timeZone: this._timeZone,
         })
-        .replace(this._amPm ? '' : / (AM|PM)/, '')
+        .replace(this._amPm ? '' : / (am|pm)/, '')
         .replace(/:/g, this._delimiter)
         .replace(/^0/, '');
 
