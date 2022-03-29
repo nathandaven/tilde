@@ -459,15 +459,29 @@
     --help-command-background: #24283b;
   }
 
-  .nathan {
-    --base-background: #ffffff;
-    --base-foreground: #333333;
-    --command-color-complementary: var(--base-background);
-    --command-color-highlight-foreground: #62a540 /*var(--base-foreground)*/;
-    --command-color-lightness: 72%;
-    --command-color-saturation: 89%;
-    --help-command-background: #62a540;
+  @media (prefers-color-scheme: light) {
+    .nathan {
+      --base-background: #ffffff;
+      --base-foreground: #333333;
+      --command-color-complementary: var(--base-background);
+      --command-color-highlight-foreground: var(--base-foreground);
+      --command-color-lightness: 72%;
+      --command-color-saturation: 89%;
+      --help-command-background: #62a540;
+    }
   }
+  @media (prefers-color-scheme: dark) {
+    .nathan {
+      --base-background: #1e1e1e;
+      --base-foreground: #e6e6e6;
+      --command-color-complementary: var(--base-background);
+      --command-color-highlight-foreground: var(--base-foreground);
+      --command-color-lightness: 72%;
+      --command-color-saturation: 89%;
+      --help-command-background: #62a540;
+    }
+  }
+
 
   /* root variables */
 
