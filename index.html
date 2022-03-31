@@ -120,27 +120,26 @@
     /**
      * Max number of suggestions that will ever be shown.
      */
-    suggestionLimit: 4,
+    suggestionLimit: 8,
 
     /**
      * Default search suggestions for the specified queries.
      */
     suggestionDefaults: {
-      0: ["0'8000", "0'8080"],
-      a: ['a/cognito/v2/idp/user-pools', 'a/dynamodbv2#item-explorer'],
-      c: ['c/calendar/u/1/r', 'c/calendar/u/2/r'],
-      d: ['d/drive/u/1/my-drive', 'd/drive/u/2/my-drive'],
-      e: ['e/brand/national-geographic', 'e/brand/marvel', 'e/brand/star-wars'],
-      g: ['g/trending', 'g/ossu', 'g/cadejscroggins/tilde', 'gist.github.com'],
-      j: ['j/popular', 'j/popular/lastweek', 'j/tags'],
-      k: ['k/u/1', 'k/u/2'],
-      m: ['m/mail/u/1', 'm/mail/u/2'],
-      o: ['o/discover/sets/new-for-you', 'o/discover/sets/weekly'],
-      p: ['p/beema.finance'],
-      r: ['r/r/startpages', 'r/r/unixporn', 'r/r/onebag', 'r/r/fujix'],
-      s: ['s/collection/tracks', 's/playlist/37i9dQZEVXcXr3r4FYT3J7'],
-      u: ['u/explore', 'u/backgrounds'],
-      y: ['y/feed/trending'],
+      localhost: ["0'8000", "0'8080"],
+      //a: ['a/cognito/v2/idp/user-pools', 'a/dynamodbv2#item-explorer'],
+      //cal: ['c/calendar/u/1/r', 'c/calendar/u/2/r'],
+      //drive: ['d/drive/u/1/my-drive', 'd/drive/u/2/my-drive'],
+      //g: ['g/trending', 'g/ossu', 'g/cadejscroggins/tilde', 'gist.github.com'],
+      //j: ['j/popular', 'j/popular/lastweek', 'j/tags'],
+      //k: ['k/u/1', 'k/u/2'],
+      //m: ['m/mail/u/1', 'm/mail/u/2'],
+      //o: ['o/discover/sets/new-for-you', 'o/discover/sets/weekly'],
+      //p: ['p/beema.finance'],
+      //r: ['r/r/startpages', 'r/r/unixporn', 'r/r/onebag', 'r/r/fujix'],
+      //s: ['s/collection/tracks', 's/playlist/37i9dQZEVXcXr3r4FYT3J7'],
+      //u: ['u/explore', 'u/backgrounds'],
+      //youtube: ['y/feed/trending'],
     },
 
     /**
@@ -161,28 +160,13 @@
         url: 'https://www.google.com',
       },
       {
-        key: 'bing',
-        search: '/search?q={}',
-        url: 'https://www.bing.com',
-      },
-      {
         key: 'ddg',
         search: '/?q={}',
         url: 'https://duckduckgo.com',
       },
       {
-        key: 'eco',
-        search: '/search?q={}',
-        url: 'https://www.ecosia.org',
-      },
-      {
-        key: 'yah',
-        search: '/search?p={}',
-        url: 'https://search.yahoo.com',
-      },
-      {
         hues: ['0', '0'],
-        key: 'x',
+        key: 'netflix',
         name: 'Netflix',
         search: '/search?q={}',
         url: 'https://www.netflix.com/browse',
@@ -196,122 +180,91 @@
       },
       {
         hues: ['5', '345'],
-        key: 'y',
+        key: 'youtube',
         name: 'YouTube',
         search: '/results?search_query={}',
         url: 'https://youtube.com/',
       },
       {
         hues: ['355', '335'],
-        key: '=',
+        key: 'wolfram',
         name: 'Wolfram',
         search: '/input/?i={}',
         url: 'https://www.wolframalpha.com',
       },
       {
-        hues: ['349', '329'],
-        key: '1',
-        name: 'OPL',
-        search: '/?s={}',
-        url: 'https://onepagelove.com/inspiration',
-      },
-      {
         hues: ['337', '317'],
         key: 'maps',
         name: 'Google Maps',
-        search: '/search/{}',
+        search: '/maps/search/{}',
         url: 'https://www.google.com/maps',
       },
       {
-        hues: ['266', '286'],
-        key: 'f',
+        // hues: ['266', '286'],
+        hues: ['337', '317'],
+        key: 'figma',
         name: 'Figma',
         url: 'https://www.figma.com/files/recent',
       },
       {
         hues: ['230', '280'],
-        key: 'i',
+        key: 'instagram',
         name: 'Instagram',
         url: 'https://www.instagram.com',
       },
       {
         hues: ['264', '244'],
-        key: 'v',
+        key: 'twitch',
         name: 'Twitch',
         url: 'https://www.twitch.tv/directory/following',
       },
       {
         hues: ['254', '234'],
-        key: 'r',
+        key: 'reddit',
         name: 'Reddit',
         search: '/search?q={}',
         url: 'https://www.reddit.com',
       },
       {
         hues: ['226', '236'],
-        key: 'c',
-        name: 'Canvas',
+        key: 'canvas',
+        name: 'GT Canvas',
         url: 'https://gatech.instructure.com',
       },
       {
-        hues: ['236', '216'],
-        key: 'w',
-        name: 'Webflow',
-        url: 'https://webflow.com/dashboard',
-      },
-      {
         hues: ['214', '234'],
-        key: 'g',
+        key: 'github',
         name: 'GitHub',
         search: '/search?q={}',
         url: 'https://github.com',
       },
       {
-        hues: ['243', '204'],
-        key: 'p',
-        name: 'Plausible',
-        url: 'https://plausible.io',
-      },
-      {
-        hues: ['192', '232'],
-        key: 'z',
-        name: 'Telegram',
-        url: 'https://web.telegram.org/z/',
-      },
-      {
         hues: ['201', '221'],
-        key: 'l',
+        key: 'linkedin',
         name: 'LinkedIn',
         search: '/search/results/all/?keywords={}',
         url: 'https://www.linkedin.com',
       },
       {
         hues: ['198', '218'],
-        key: ';',
+        key: 'mdn',
         name: 'MDN',
         search: '/en-US/search?q={}',
         url: 'https://developer.mozilla.org/en-US',
       },
       {
         hues: ['217', '197'],
-        key: 'm',
-        name: 'Mail',
+        key: 'gmail',
+        name: 'Google Mail',
         search: '/mail/u/0/?q={}#search/{}',
         url: 'https://mail.google.com/mail/u/0',
       },
       {
         hues: ['203', '183'],
-        key: 't',
+        key: 'twitter',
         name: 'Twitter',
         search: '/search?q={}',
         url: 'https://twitter.com/home',
-      },
-      {
-        hues: ['166', '146'],
-        key: '+',
-        name: 'Khan',
-        search: '/search?page_search_query={}',
-        url: 'https://www.khanacademy.org',
       },
       {
         hues: ['136', '156'],
@@ -329,53 +282,58 @@
       },
       {
         hues: ['90'],
-        key: 'j',
+        key: 'hypem',
         name: 'Hypem',
         search: '/search/{}',
         url: 'https://hypem.com/latest',
       },
       {
         hues: ['45', '40'],
-        key: 'kep',
+        key: 'keep',
         name: 'Keep',
         search: '/u/0/#search/text={}',
         url: 'https://keep.google.com/u/0',
       },
       {
-        hues: ['36', '26'],
-        key: 'a',
-        name: 'AWS',
-        url: 'https://us-west-2.console.aws.amazon.com/console/home',
-      },
-      {
-        hues: ['32', '22'],
-        key: 'o',
-        name: 'Sounds',
+        hues: ['45', '40'],
+        key: 'soundcloud',
+        name: 'SoundCloud',
         search: '/search?q={}',
         url: 'https://soundcloud.com/discover',
       },
       {
-        hues: ['13', '33'],
-        key: 'h',
-        name: 'Hunt',
-        search: '/search?q={}',
-        url: 'https://www.producthunt.com',
-      },
-      {
-        hues: ['4', '24'],
+        hues: ['45', '40'],
         key: 'notion',
         name: 'Notion',
         url: 'https://www.notion.so',
       },
       {
-        key: 'u',
-        name: 'Unsplash',
-        search: '/search/{}',
-        url: 'https://unsplash.com/images',
+        hues: ['32', '22'],
+        key: 'truist',
+        name: 'Truist Banking',
+        url: 'https://bank.truist.com/web/home',
       },
       {
-        key: 'local',
-        name: 'Local',
+        hues: ['32', '22'],
+        key: 'teams',
+        name: 'Microsoft Teams',
+        url: 'https://www.teams.microsoft.com',
+      },
+      {
+        hues: ['32', '22'],
+        key: 'gtmail',
+        name: 'GT Mail',
+        url: 'http://mail.gatech.edu/',
+      },
+      {
+        hues: ['4', '24'],
+        key: 'one',
+        name: 'One USG',
+        url: 'https://hcm-sso.onehcm.usg.edu/',
+      },
+      {
+        key: 'localhost',
+        name: 'Local Host',
         url: 'http://localhost:3000',
       },
     ].map((command) => {
@@ -472,6 +430,7 @@
       --help-command-background: rgb(240, 240, 240);
     }
   }
+
   @media (prefers-color-scheme: dark) {
     .nathan {
       --base-background: #1e1e1e;
@@ -597,7 +556,7 @@
     height: 100%;
   }
 
-  .center > * {
+  .center>* {
     margin: auto;
   }
 
@@ -733,12 +692,7 @@
 <div class="center">
   <time class="clock" id="clock" />
 </div>
-<form
-  autocomplete="off"
-  class="center overlay search-form"
-  id="search-form"
-  spellcheck="false"
->
+<form autocomplete="off" class="center overlay search-form" id="search-form" spellcheck="false">
   <div class="search-form-content">
     <input class="search-input" id="search-input" title="search" type="text" />
     <ul class="search-suggestions" id="search-suggestions" />
@@ -1064,9 +1018,9 @@
 
         const suggestionHtml = matched
           ? suggestion.replace(
-              match,
-              `<span class="search-suggestion-match">${matched[0]}</span>`
-            )
+            match,
+            `<span class="search-suggestion-match">${matched[0]}</span>`
+          )
           : suggestion;
 
         return `
